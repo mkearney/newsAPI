@@ -6,7 +6,7 @@
   key.
 - Save the key as an environment variable
 
-```{r, eval=FALSE}
+```{r}
 ## my obscured key
 NEWSAPI_KEY <- "4345e85e8ae1427480xxxxxxxxxxxxxx"
 
@@ -22,14 +22,14 @@ cat(
 ## Demo
 - Get all the news sources.
 
-```{r, eval=FALSE}
+```{r}
 src <- get_sources(language = "en")
 src
 ```
 
 - Pass news source names (IDs) to `get_articles` function.
 
-```{r, eval=FALSE}
+```{r}
 df <- lapply(src$id, get_articles)
 df <- do.call("rbind", df)
 df
