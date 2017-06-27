@@ -10,6 +10,9 @@
 #' @param apiKey Character string API token. Default is to grab it from user R environ.
 #' @param parse Logical indicating whether to parse response object to data frame.
 #' @examples
+#' \dontrun{
+#' df <- get_sources()
+#' }
 #' @importFrom httr content GET warn_for_status
 #' @return Data frame or nested list.
 #' @export
