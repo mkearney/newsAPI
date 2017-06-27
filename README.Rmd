@@ -6,7 +6,7 @@
   key.
 - Save the key as an environment variable
 
-```{r}
+```{r, eval=FALSE}
 ## my obscured key
 NEWSAPI_KEY <- "4345e85e8ae1427480xxxxxxxxxxxxxx"
 
@@ -19,19 +19,42 @@ cat(
 )
 ```
 
-## Demo
-- Get all the news sources.
+## Install
 
-```{r}
-src <- get_sources(language = "en")
-print(src, width = 300)
+- Install from Github
+
+```{r, eval=FALSE}
+## install script
+if (!"devtools" %in% installed.packages()) {
+  install.packages("devtools")
+}
+devtools::install_github("mkearney/newsAPI")
+
+## load package
+library(newsAPI)
 ```
 
-- Pass news source names (IDs) to `get_articles` function.
+## Demo
+- Get all available news sources
 
 ```{r}
+## get all english language news sources (made available by newsapi.org)
+src <- get_sources(language = "en")
+
+## preview data
+print(src, width = 500)
+```
+
+- Pass news source names (IDs) to `get_articles` function
+
+```{r}
+## apply get_articles function to each news source
 df <- lapply(src$id, get_articles)
+
+## collapse into single data frame
 df <- do.call("rbind", df)
-print(df, width = 300)
+
+## preview data
+print(df, width = 500)
 ```
 
