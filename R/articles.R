@@ -10,7 +10,7 @@
 #' @param parse Logical indicating whether to parse response object to data frame.
 #' @examples
 #' \dontrun{
-#' df <- get_sources("espn")
+#' df <- get_articles("espn")
 #' }
 #' @importFrom httr content GET warn_for_status
 #' @return Data frame or nested list.

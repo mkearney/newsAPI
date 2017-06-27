@@ -24,6 +24,6 @@ Returns news sources with meta data.
 }
 \examples{
 \dontrun{
-df <- get_sources("espn")
+df <- get_articles("espn")
 }
 }

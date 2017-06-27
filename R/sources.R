@@ -11,7 +11,11 @@
 #' @param parse Logical indicating whether to parse response object to data frame.
 #' @examples
 #' \dontrun{
-#' df <- get_sources()
+#' ## get english language news sources
+#' df <- get_sources(language = "en")
+#'
+#' ## preview data
+#' df
 #' }
 #' @importFrom httr content GET warn_for_status
 #' @return Data frame or nested list.

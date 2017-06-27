@@ -28,6 +28,10 @@ Returns news sources with meta data.
 }
 \examples{
 \dontrun{
-df <- get_sources()
+## get english language news sources
+df <- get_sources(language = "en")
+
+## preview data
+df
 }
 }
