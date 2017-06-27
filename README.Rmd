@@ -24,7 +24,7 @@ cat(
 
 ```{r}
 src <- get_sources(language = "en")
-src
+print(src, width = 300)
 ```
 
 - Pass news source names (IDs) to `get_articles` function.
@@ -32,6 +32,6 @@ src
 ```{r}
 df <- lapply(src$id, get_articles)
 df <- do.call("rbind", df)
-df
+print(df, width = 300)
 ```
 
