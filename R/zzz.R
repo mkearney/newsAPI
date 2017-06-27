@@ -126,6 +126,7 @@ round_time <- function(x, interval = 60, center = TRUE) {
 #' @param \dots Passed along to trim_time. Most likely used to specify timezone.
 #' @return Data frame with time, n, and grouping column if applicable.
 #' @export
+#' @noRd
 ts_data <- function(data, by = "days", group = NULL, ...) {
   if (inherits(data, "grouped_df")) {
     group <- names(attr(data, "labels"))
